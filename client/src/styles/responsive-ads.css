@@ -1,0 +1,71 @@
+/* Responsive Ads CSS for Better Mobile Experience */
+.responsive-ad-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-banner {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Desktop Responsive Banner */
+@media (min-width: 768px) {
+  .desktop-banner .responsive-banner {
+    max-width: 728px;
+    height: clamp(60px, 8vw, 120px);
+  }
+}
+
+/* Mobile Responsive Banner */
+@media (max-width: 767px) {
+  .mobile-banner .responsive-banner {
+    max-width: 320px;
+    height: clamp(40px, 12vw, 80px);
+  }
+}
+
+/* Sidebar Responsive Banner */
+.sidebar-banner .responsive-banner {
+  max-width: 300px;
+  height: clamp(150px, 25vw, 300px);
+  aspect-ratio: 6/5;
+}
+
+/* Bottom Sticky Banner Responsive */
+.fixed.bottom-0 .responsive-banner {
+  height: clamp(40px, 12vw, 60px) !important;
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .desktop-banner .responsive-banner {
+    max-width: 600px;
+    height: clamp(70px, 10vw, 100px);
+  }
+  
+  .sidebar-banner .responsive-banner {
+    max-width: 250px;
+    height: clamp(120px, 20vw, 200px);
+  }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1200px) {
+  .desktop-banner .responsive-banner {
+    max-width: 728px;
+    height: 90px;
+  }
+  
+  .sidebar-banner .responsive-banner {
+    max-width: 300px;
+    height: 250px;
+  }
+}
